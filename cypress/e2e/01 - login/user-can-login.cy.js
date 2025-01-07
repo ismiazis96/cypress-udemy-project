@@ -17,11 +17,6 @@ describe('User Can Login to System', () => {
              
         // assertion
         cy.get('[data-test="username"]').should('have.text','Hi, SuperAdmin');
-        // cy.get(".navbar-right > :nth-child(2) > .nav-link").click();
-        // cy.get(".text-danger").click();
-        // cy.get("h4").should("be.visible");
-        // cy.get("h4").should("have.text", "Login");
-        // cy.get(".simple-footer").should("contain", "Copyright © Stisla 2018");
     });
 
     // negative  test case 1 : User cannot login if email false

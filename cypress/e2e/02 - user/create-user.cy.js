@@ -25,11 +25,12 @@ describe('Menu Users', () => {
     password: 'password',
     assertion: 'Hi, SuperAdmin'
   };
-  // const newUser = {
-  //   name: 'ismitech2',
-  //   email: 'ismitech2@gmail.com',
-  //   password: '123456'
-  // };
+  // variael dibawah digunakan jika menggunakan 1 data
+  const newUser = {
+    name: 'ismiazis',
+    email: 'ismiazis01@gmail.com',
+    password: '123456'
+  };
 
   beforeEach(() => {
     cy.visit(url);
@@ -40,7 +41,7 @@ describe('Menu Users', () => {
     cy.get('[data-test="username"]').should('have.text', userData.assertion);
   });
 
-  it.skip('buat user baru', () => {
+  it('buat user baru', () => {
     cy.login(userData.email, userData.password);
     cy.visit(url + 'user-management/user');
     cy.contains('Create New User').click();
@@ -48,7 +49,7 @@ describe('Menu Users', () => {
     cy.get('.alert-success').should('contain', 'Data Berhasil Ditambahkan');
   });
 
-  it('buat data user sebanyak 10 kali dengan data yang unik', () => {
+  it.skip('buat data user sebanyak 10 kali dengan data yang unik', () => {
     cy.login(userData.email, userData.password);
     cy.visit(url + 'user-management/user');
 
