@@ -27,9 +27,9 @@
 
 /** Logic Login*/
 Cypress.Commands.add('login', (email, password) => {
-    cy.get('[data-test="email"]').type(email);
-    cy.get('[data-test="password"]').type(password);
-    cy.get('[data-test="submit"]').click();
+    cy.get('[data-cy="email"]').type(email);
+    cy.get('[data-cy="password"]').type(password);
+    cy.get('[data-cy="submit"]').click();
   });
   
 /* Login add user baru*/
@@ -37,6 +37,6 @@ Cypress.Commands.add('login', (email, password) => {
     cy.get('#name').type(user.name);
     cy.get('#email').type(user.email);
     cy.get('#password').type(user.password);
-    cy.get('[data-test="btn-submit-create"]').click();
+    cy.get('[data-cy="btn-submit-create"]').click();
   });
   

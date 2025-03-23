@@ -1,5 +1,5 @@
 describe('Menu Users', () => {
-    const url = 'http://demo-app-cypress-automation.test/';
+    const url = '/';
     const userData = {
       email: 'superadmin@gmail.com',
       password: 'password',
@@ -12,7 +12,7 @@ describe('Menu Users', () => {
 
       it('login dengan data valid', () => {
         cy.login(userData.email, userData.password);
-        cy.get('[data-test="username"]').should('have.text', userData.assertion);
+        cy.get('[data-cy="iconProfile"]').should('have.text', userData.assertion);
       });
     
       it('menampilkan halaman user', () => {
